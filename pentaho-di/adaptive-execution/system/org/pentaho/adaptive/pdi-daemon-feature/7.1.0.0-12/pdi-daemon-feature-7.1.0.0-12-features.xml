@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="pdi-daemon-feature">
+    <feature name="pdi-daemon-feature" description="pdi-daemon-feature" version="7.1.0.0-12">
+        <details>a parent pom for general configuration of Pentaho sponsored open source projects</details>
+        <feature prerequisite="true" dependency="false">shell</feature>
+        <feature prerequisite="true" dependency="false">aries-rsa-provider-fastbin</feature>
+        <feature prerequisite="true" dependency="false">aries-rsa-discovery-zookeeper</feature>
+        <feature prerequisite="true" dependency="false">wrap</feature>
+        <bundle>mvn:pentaho/pentaho-zookeeper-fragment/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:org.pentaho.adaptive/daemon-configuration/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:org.pentaho/pdi-engine-api/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:org.reactivestreams/reactive-streams/1.0.0</bundle>
+        <bundle start-level="80">mvn:commons-io/commons-io/2.5</bundle>
+        <bundle start-level="80">wrap:mvn:org.apache.spark/spark-launcher_2.11/2.1.0</bundle>
+        <bundle start-level="80">mvn:org.pentaho.adaptive/daemon-spark-executor/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:org.pentaho.adaptive/daemon-execution-manager/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:org.apache.karaf.system/org.apache.karaf.system.core/4.0.7</bundle>
+        <bundle start-level="80">wrap:mvn:org.apache.karaf/org.apache.karaf.util/4.0.7</bundle>
+        <bundle start-level="80">wrap:mvn:org.apache.felix/org.apache.felix.utils/1.8.2</bundle>
+        <bundle start-level="80">mvn:org.apache.karaf.jaas/org.apache.karaf.jaas.boot/4.0.7</bundle>
+        <bundle start-level="80">mvn:com.google.guava/guava/17.0</bundle>
+        <bundle start-level="80">mvn:pentaho/pentaho-object-tunnel/7.1.0.0-12</bundle>
+        <bundle start-level="80">mvn:io.reactivex.rxjava2/rxjava/2.0.4</bundle>
+    </feature>
+</features>

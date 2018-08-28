@@ -1,0 +1,633 @@
+#!/bin/bash
+#
+#  ##############################################################################
+#
+#  Copyright (C) 2002-2017 by Pentaho : http://www.pentaho.com
+#
+#  ##############################################################################
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with
+#  the License. You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+
+realpath() {
+  OURPWD=${PWD}
+  cd "$(dirname "${1}")"
+  LINK=$(readlink "$(basename "${1}")")
+  while [ "${LINK}" ]; do
+    cd "$(dirname "${LINK}")"
+    LINK=$(readlink "$(basename "${1}")")
+  done
+  REALPATH="${PWD}/$(basename "${1}")"
+  cd "${OURPWD}"
+  echo "${REALPATH}"
+}
+
+warn() {
+  echo "${PROGNAME}: $*"
+}
+
+die() {
+  echo "${PROGNAME}: $*" >&2
+  exit 1
+}
+
+# OS specific support.
+darwin=false;
+case "$(uname -s)" in
+  Darwin*)
+    darwin=true
+    ;;
+esac
+
+PROGNAME=$(basename "$0")
+DAEMON_HOME=$(realpath $(dirname "$0"))
+KARAF="${DAEMON_HOME}/bin/karaf"
+DAEMON_LOG="${DAEMON_LOG:-$DAEMON_HOME/data/log/pdi-daemon.log}"
+DAEMON_CFG="${DAEMON_HOME}/etc/org.pentaho.pdi.engine.daemon.cfg"
+FEATURES_CFG="${DAEMON_HOME}/etc/org.apache.karaf.features.cfg"
+ZOOKEEPER_SERVER_CFG="${DAEMON_HOME}/etc/org.apache.aries.rsa.discovery.zookeeper.server.cfg"
+ZOOKEEPER_CFG="${DAEMON_HOME}/etc/org.apache.aries.rsa.discovery.zookeeper.cfg"
+JAAS_PATH=$(realpath "${DAEMON_HOME}/jaas/jaas.conf")
+
+if [ ! -f "${KARAF}" ]; then
+  die "karaf not found"
+fi
+
+if [ -z "${DAEMON_CFG}" ]; then
+  die "daemon configuration file not found: $DAEMON_HOME"
+fi
+if [ -z "${FEATURES_CFG}" ]; then
+  die "features configuration not found: $DAEMON_HOME"
+fi
+
+#
+# Sourcing environment settings for pdi daemon
+#
+if [ -f "${DAEMON_HOME}/setenv" ]; then
+  . "${DAEMON_HOME}/setenv"
+fi
+
+printHelp() {
+  echo "usage: $PROGNAME <command> [<options>]"
+  echo "  COMMANDS:"
+  echo -e "    start\tStarts the pdi daemon"
+  echo -e "    stop\tStops the pdi daemon"
+  echo -e "    status\tQueries if daemon is running"
+  echo
+  echo "  OPTIONS:"
+  echo -e "    -d, --debug\t\t Enable remote debugging"
+  echo -e "    -i, --interactive\t Runs daemon in the foreground"
+  echo
+  echo "Ancillary commands"
+  echo -e "  config"
+  echo "    Edit configuration files"
+}
+
+printConfigHelp() {
+  echo "usage: $PROGNAME config [<options>]"
+  echo
+  echo "Config file"
+  echo -e "    --daemon"
+  echo -e "    --jaas"
+  echo -e "    --zookeeper <client|server [enable|disable]>"
+  echo -e "    -q, --quiet\n\t Reads whatever environment variables set and use them for configuration"
+  echo
+  echo "Action"
+  echo "  options:"
+  echo -e "    -l, --list\n\t List all"
+  echo -e "    -e, --edit\n\t open an editor"
+  echo -e "    -s, --secure [<keytab_path>] [<principal>] [<jaas_path>]\n\t Setup a secured cluster"
+  echo -e "    --reset\n\t Restore default parameters"
+}
+
+listProperties() {
+  local FILE=$1
+  [ ! -f "${FILE}" ] && die "The file ${FILE} does not exist."
+  grep "^[^#].*=" ${FILE}
+}
+
+locateJava() {
+  [ -n "${PENTAHO_JAVA_HOME}" ] && JAVA_HOME="${PENTAHO_JAVA_HOME}"
+  if [ -z "${JAVA_HOME}" ]; then
+    warn "JAVA_HOME not set; results may vary"
+    JAVA=$(which java)
+    if [ -z "${JAVA}" ]; then
+      die "java command not found"
+    fi
+    JAVA_HOME="$(dirname "$(dirname "${JAVA}")")"
+  fi
+  JAVA="${JAVA_HOME}/bin/java"
+  if [ -f "${JAVA}" ]; then
+    checkJvmVersion
+  else
+    die "java command not found: ${JAVA}"
+  fi
+}
+
+readProperty() {
+  local CONFIG=$1
+  local PROPERTY=$2
+  grep -m1 "${PROPERTY}=" ${CONFIG} | sed "s|\(${PROPERTY}=\)\(.*\)\([;]*\)\$|\2|"
+}
+
+locateSpark() {
+  local spark=$(readProperty ${DAEMON_CFG} "sparkHome")
+  if [ ! -d "${spark}" ]; then
+    # check if SPARK_HOME was set
+    if [ -z "${SPARK_HOME}" ]; then
+      warn "SPARK_HOME not set; results may vary"
+      spark=$(which spark-submit)
+      [ -z "${spark}" ] && die "Spark home not found, please specify SPARK_HOME"
+      SPARK_HOME="$(dirname "$(dirname "$(realpath $spark)")")"
+    fi
+  else
+    SPARK_HOME=$spark
+  fi
+  [ ! -f "${SPARK_HOME}/bin/spark-submit" ] && die "Invalid Spark home, please specify SPARK_HOME: ${SPARK_HOME}"
+  changeProperty "${DAEMON_CFG}" "sparkHome" "${SPARK_HOME}"
+}
+
+locateDataIntegration() {
+  local app=$(readProperty ${DAEMON_CFG} "sparkApp")
+  if [ ! -e "${app}" ]; then
+    # check if SPARK_APP was set
+    if [ -z "${SPARK_APP}" ]; then
+      warn "SPARK_APP not set; results may vary"
+      SPARK_APP=$(find ${DAEMON_HOME}/../.. -type d -name data-integration)
+      [ ! -e "${SPARK_APP}" ] && die "Spark App not found, please specify SPARK_APP"
+    fi
+    changeProperty "${DAEMON_CFG}" "sparkApp" "${SPARK_APP}"
+  fi
+}
+
+checkJvmVersion() {
+  # echo $JAVA
+  local VERSION=$(${JAVA} -version 2>&1 | sed -n ';s/.* version "\(.*\)\.\(.*\)\..*"/\1\2/p;' | awk -F. '{printf("%03d",$1);}')
+  # echo $VERSION
+  [ ${VERSION} -lt 18 ] && die "JVM version must be 1.8 or greater"
+}
+
+exists() {
+  local FILE=$1
+  local EXPR=$2
+  grep -q "${EXPR}" ${FILE}
+}
+
+openEditor() {
+  local FILE=$1
+  [ ! -f "${FILE}" ] && die "The file ${FILE} does not exist."
+  if [ "${darwin}" = "true" ]; then
+    ${EDITOR:-open -t} ${FILE}
+  else
+    ${EDITOR:-vi} ${FILE}
+  fi
+}
+
+addJavaOpts() {
+  local OPTS="${1}"
+  if [ -n "${EXTRA_JAVA_OPTS}" ]; then
+    EXTRA_JAVA_OPTS="${EXTRA_JAVA_OPTS} ${OPTS}"
+  else
+    EXTRA_JAVA_OPTS="${OPTS}"
+  fi
+  export EXTRA_JAVA_OPTS
+}
+
+changeProperty() {
+  local CONFIG=$1
+  local PROPERTY=$2
+  local VAL=$3
+#  warn "changing file $CONFIG with ${PROPERTY}=${VAL}"
+  if exists ${CONFIG} "^\s*${PROPERTY}="; then
+    enableProperty ${CONFIG} ${PROPERTY}
+    if [ "${darwin}" = "true" ]; then
+      sed -i '' -e "s|\(${PROPERTY}=\).*\([;]*\)\$|\1${VAL}\2|" ${CONFIG}
+    else
+      sed -i -e "s|\(${PROPERTY}=\).*\([;]*\)\$|\1${VAL}\2|" ${CONFIG}
+    fi
+  else
+    echo "${PROPERTY}=${VAL}" >> ${CONFIG}
+  fi
+}
+
+enableProperty() {
+  local CONFIG=$1
+  local PROPERTY=$2
+  if [ "${darwin}" = "true" ]; then
+    sed -i '' -e "/${PROPERTY}=/ s|^#[ ]\{0,1\}||" ${CONFIG}
+  else
+    sed -i -e "/${PROPERTY}=/ s|^#[ ]\{0,1\}||" ${CONFIG}
+  fi
+}
+
+disableProperty() {
+  local CONFIG=$1
+  local PROPERTY=$2
+  if [ "${darwin}" = "true" ]; then
+    sed -i '' -e "/^\s*\(${PROPERTY}=\)/ s|^|# |" ${CONFIG}
+  else
+    sed -i -e "/^\s*\(${PROPERTY}=\)/ s|^|# |" ${CONFIG}
+  fi
+}
+
+enableFeature() {
+  local CONFIG=$1
+  local FEATURE=$2
+  if ! exists ${CONFIG} "^\s*${FEATURE}"; then
+    warn "enabling feature ${FEATURE} in ${CONFIG}"
+    if [ "${darwin}" = "true" ]; then
+      sed -i '' -e '/wrap/s/.*/&\'$'\n'"    ${FEATURE}, \\\/" ${CONFIG}
+    else
+      sed -i -e '/wrap/s/.*/&\'$'\n'"    ${FEATURE}, \\\/" ${CONFIG}
+    fi
+  fi
+}
+
+disableFeature() {
+  local CONFIG=$1
+  local FEATURE=$2
+  if exists ${CONFIG} "^\s*$FEATURE"; then
+    warn "disabling feature ${FEATURE} in ${CONFIG}"
+    if [ "${darwin}" = "true" ]; then
+      sed -i '' -e "/${FEATURE}/d" ${CONFIG}
+    else
+      sed -i -e "/${FEATURE}/d" ${CONFIG}
+    fi
+  fi
+}
+
+setupDaemonDebug() {
+  if [ -n "${DAEMON_DEBUG}" ]; then
+    KARAF_DEBUG_PORT="${KARAF_DEBUG_PORT:-5005}"
+    SPARK_DRIVER_DEBUG_PORT="${SPARK_DRIVER_DEBUG_PORT:-5006}"
+    SPARK_EXECUTOR_DEBUG_PORT="${SPARK_EXECUTOR_DEBUG_PORT:-5007}"
+    SUSPEND_DEBUG="${SUSPEND_DEBUG:-true}"
+    echo "** Debug mode enabled"
+    echo "**     ${KARAF_DEBUG_PORT} ==> pdi daemon karaf instance"
+    echo "**     ${SPARK_DRIVER_DEBUG_PORT} ==> spark driver"
+    echo "**     ${SPARK_EXECUTOR_DEBUG_PORT} ==> spark executor"
+
+    export KARAF_DEBUG=true
+    export JAVA_DEBUG_PORT=${KARAF_DEBUG_PORT}
+  fi
+
+  [ -n "${SUSPEND_DEBUG}" ]             && changeProperty "${DAEMON_CFG}" "suspendDebug"      "${SUSPEND_DEBUG}"
+  [ -n "${SPARK_DRIVER_DEBUG_PORT}" ]   && changeProperty "${DAEMON_CFG}" "driverDebugPort"   "${SPARK_DRIVER_DEBUG_PORT}"
+  [ -n "${SPARK_EXECUTOR_DEBUG_PORT}" ] && changeProperty "${DAEMON_CFG}" "executorDebugPort" "${SPARK_EXECUTOR_DEBUG_PORT}"
+}
+
+setupDaemon() {
+  # setup the spark properties in the daemon configuration file
+  [ -n "${SPARK_HOME}" ]            && changeProperty "${DAEMON_CFG}" "sparkHome"           "${SPARK_HOME}"
+  [ -n "${SPARK_APP}" ]             && changeProperty "${DAEMON_CFG}" "sparkApp"            "${SPARK_APP}"
+  [ -n "${ASSEMBLY_ZIP}" ]          && changeProperty "${DAEMON_CFG}" "assemblyZip"         "${ASSEMBLY_ZIP}"
+
+  [ -n "${SPARK_DRIVER_MEMORY}" ]      && changeProperty "${DAEMON_CFG}" "sparkDriverMemory"             "${SPARK_DRIVER_MEMORY}"
+  [ -n "${SPARK_EXECUTOR_MEMORY}" ]    && changeProperty "${DAEMON_CFG}" "sparkExecutorMemory"           "${SPARK_EXECUTOR_MEMORY}"
+  [ -n "${SPARK_DRIVER_JAVA_OPTS}" ]   && changeProperty "${DAEMON_CFG}" "sparkDriverExtraJavaOptions"   "${SPARK_DRIVER_JAVA_OPTS}"
+  [ -n "${SPARK_EXECUTOR_JAVA_OPTS}" ] && changeProperty "${DAEMON_CFG}" "sparkExecutorExtraJavaOptions" "${SPARK_EXECUTOR_JAVA_OPTS}"
+
+  [ -n "${HADOOP_CONF_DIR}" ]       && changeProperty "${DAEMON_CFG}" "hadoopConfDir"       "${HADOOP_CONF_DIR}"
+  [ -n "${HADOOP_USER}" ]           && changeProperty "${DAEMON_CFG}" "hadoopUser"          "${HADOOP_USER}"
+  [ -n "${SPARK_MASTER}" ]          && changeProperty "${DAEMON_CFG}" "sparkMaster"         "${SPARK_MASTER}"
+  [ -n "${SPARK_DEPLOY_MODE}" ]     && changeProperty "${DAEMON_CFG}" "sparkDeployMode"     "${SPARK_DEPLOY_MODE}"
+  [ -n "${KEYTAB_NAME}" ]           && changeProperty "${DAEMON_CFG}" "keytabName"          "${KEYTAB_NAME}"
+  [ -n "${KERBEROS_PRINCIPAL}" ]    && changeProperty "${DAEMON_CFG}" "kerberosPrincipal"   "${KERBEROS_PRINCIPAL}"
+  [ -n "${DISABLE_PROXY_USER}" ]    && changeProperty "${DAEMON_CFG}" "disableProxyUser"    "${DISABLE_PROXY_USER}"
+}
+
+setupEmbeddedZookeeper() {
+  # create file if not exists
+  touch ${ZOOKEEPER_SERVER_CFG}
+
+  [ -n "${ZOOKEEPER_CLIENT_PORT}" ] && changeProperty "${ZOOKEEPER_SERVER_CFG}" "clientPort" "${ZOOKEEPER_CLIENT_PORT}"
+  [ -n "${ZOOKEEPER_TICK_TIME}" ]   && changeProperty "${ZOOKEEPER_SERVER_CFG}" "tickTime" "${ZOOKEEPER_TICK_TIME}"
+  [ -n "${ZOOKEEPER_INIT_LIMIT}" ]  && changeProperty "${ZOOKEEPER_SERVER_CFG}" "initLimit" "${ZOOKEEPER_INIT_LIMIT}"
+  [ -n "${ZOOKEEPER_SYNC_LIMIT}" ]  && changeProperty "${ZOOKEEPER_SERVER_CFG}" "syncLimit" "${ZOOKEEPER_SYNC_LIMIT}"
+  [ -n "${ZOOKEEPER_DATA_DIR}" ]    && changeProperty "${ZOOKEEPER_SERVER_CFG}" "dataDir" "${ZOOKEEPER_DATA_DIR}"
+}
+
+setupZookeeper() {
+  # create file if not exists
+  touch ${ZOOKEEPER_CFG}
+
+  [ -n "${ZOOKEEPER_HOST}" ]    && changeProperty "${ZOOKEEPER_CFG}" "zookeeper.host" "${ZOOKEEPER_HOST}"
+  [ -n "${ZOOKEEPER_PORT}" ]    && changeProperty "${ZOOKEEPER_CFG}" "zookepeer.port" "${ZOOKEEPER_PORT}"
+  [ -n "${ZOOKEEPER_TIMEOUT}" ] && changeProperty "${ZOOKEEPER_CFG}" "zookeeper.timeout" "${ZOOKEEPER_TIMEOUT}"
+}
+
+createJaasFile() {
+  cat << 'EOF' > ${DAEMON_HOME}/jaas/jaas.conf
+Client {
+  com.sun.security.auth.module.Krb5LoginModule required
+  debug=true
+  userKeyTab=true
+  storeKey=true
+  useTicketCache=false
+  keyTab="placeholder"
+  principal="placeholder";
+};
+EOF
+}
+
+setupSecurityAuth() {
+  [ ! -f "${KEYTAB_PATH}" ] && die "Please specify KEYTAB_PATH with path for user.keytab file"
+  [ -z "${KERBEROS_PRINCIPAL}" ] && die "Please specify KERBEROS_PRINCIPAL name"
+
+  KEYTAB=$(realpath "${KEYTAB_PATH}")
+  keytabName="$(basename "${KEYTAB}")"
+
+  if [ -z "${JAAS_CFG}" ]; then
+    JAAS_CFG="${DAEMON_HOME}/jaas/jaas.conf"
+    createJaasFile
+    changeProperty "${JAAS_CFG}" "keyTab" "\"${KEYTAB}\""
+    changeProperty "${JAAS_CFG}" "principal" "\"${KERBEROS_PRINCIPAL}\""
+  fi
+
+  # copy configs to jaas and keytab folders
+  KEYTAB_PATH=$(realpath "${DAEMON_HOME}/keytab/${keytabName}")
+  cp ${JAAS_CFG} ${JAAS_PATH} 2> /dev/null
+  cp ${KEYTAB} ${KEYTAB_PATH} 2> /dev/null
+
+  changeProperty "${DAEMON_CFG}" "keytabName" "${keytabName}"
+  changeProperty "${DAEMON_CFG}" "kerberosPrincipal" "${KERBEROS_PRINCIPAL}"
+}
+
+resetConfig() {
+  warn "Resetting PDI daemon configurations"
+  # search for the line number where the script ends and the defaults starts
+  local skip=$(awk '/^__DAEMON_DEFAULTS__/ {print NR + 1; exit 0;}' ${PROGNAME})
+  tail -n +${skip} ${PROGNAME} >${DAEMON_CFG}
+
+  warn "Resetting Zookeeper configurations"
+  enableFeature "${FEATURES_CFG}" "aries-rsa-discovery-zookeeper-server"
+  > ${ZOOKEEPER_SERVER_CFG}
+  > ${ZOOKEEPER_CFG}
+
+  warn "Cleaning jaas files"
+  rm -rf ${DAEMON_HOME}/jaas/jaas.conf
+  rm -rf ${DAEMON_HOME}/keytab/*.keytab
+}
+
+init() {
+  if [ -n "${PENTAHO_JAVA_OPTIONS}" ]; then
+    addJavaOpts "${PENTAHO_JAVA_OPTIONS}"
+  fi
+
+  # Locate the Java VM to execute
+  locateJava
+
+  # Locate Spark Home
+  locateSpark
+  # Locate Data Integration
+  locateDataIntegration
+
+  if [ -f "${JAAS_PATH}" ]; then
+    addJavaOpts "-Djava.security.auth.login.config=${JAAS_PATH}"
+  fi
+}
+
+changePropertyAndQuit() {
+  local EDIT_CFG_FILE=$1;
+  if [ -n "$2" ] && [[ $2 != -* ]]; then
+    local key=$2;
+  fi
+  if [ -n "$3" ] && [[ $3 != -* ]]; then
+    local value=$3;
+  fi
+  if [ -n "${key}" ]; then
+    if [ -z "${value}" ]; then
+      die "value not set for \"${key}\""
+    fi
+    changeProperty "${EDIT_CFG_FILE}" "${key}" "${value}"
+    exit 0
+  fi
+}
+
+configMenu() {
+  if [[ $# -eq 0 ]]; then
+    printConfigHelp
+    exit 0
+  fi
+  local EDIT_CFG_FILE
+  while [[ $# -gt 0 ]]; do
+    local opt="$1"; shift
+    case "$opt" in
+      "--daemon" )
+        EDIT_CFG_FILE=${DAEMON_CFG}
+        changePropertyAndQuit ${EDIT_CFG_FILE} $1 $2
+        ;;
+      "--jaas" )
+        EDIT_CFG_FILE=${JAAS_PATH}
+        ;;
+      "--zookeeper" )
+        [ -z $1 ] && die "Please provide a valid target <client|server [enable|disable]>"
+        instance=$1; shift
+        [ "$instance" = "client" ] && EDIT_CFG_FILE=${ZOOKEEPER_CFG}
+        if [ "$instance" = "server" ]; then
+          EDIT_CFG_FILE=${ZOOKEEPER_SERVER_CFG}
+          if [ -n "$1" ] && [[ $1 != -* ]]; then
+            if [ "$1" = "enable" ]; then
+              # Enable embedded Zookeeper
+              enableFeature "${FEATURES_CFG}" "aries-rsa-discovery-zookeeper-server"
+              break
+            fi
+            if [ "$1" = "disable" ]; then
+              # disable embedded Zookeeper
+              disableFeature "${FEATURES_CFG}" "aries-rsa-discovery-zookeeper-server"
+              break
+            fi
+          fi
+        fi
+        [ -z "${EDIT_CFG_FILE}" ] && die "Please provide a valid target <client|server [enable|disable]>"
+        changePropertyAndQuit ${EDIT_CFG_FILE} $1 $2
+        ;;
+      "-l"|"--list" )
+        local list=true
+        ;;
+      "-e"|"--edit" )
+        local editor=true
+        ;;
+      "-q"|"--quiet" )
+        local write_changes=true
+        ;;
+      "-s"|"--secure" )
+        if [ -n "$1" ] && [[ $1 != -* ]]; then
+          KEYTAB_PATH=$1
+          shift
+        fi
+        if [ -n "$1" ] && [[ $1 != -* ]]; then
+          KERBEROS_PRINCIPAL=$1
+          shift
+        fi
+        if [ -n "$1" ] && [[ $1 != -* ]]; then
+          JAAS_CFG=$1
+          shift
+        fi
+        local SECURED=true
+        ;;
+      "--reset" )
+        resetConfig
+        exit 0
+        ;;
+      *)
+        printConfigHelp
+        exit 1
+        ;;
+    esac
+  done
+  if [ ${write_changes} ]; then
+    # Setup the spark properties file
+    setupDaemon
+
+    # Setup Zookeeper
+    setupEmbeddedZookeeper
+    setupZookeeper
+  fi
+
+  [ ${SECURED} ] && setupSecurityAuth
+  [ ${list} ] && listProperties ${EDIT_CFG_FILE}
+  [ ${editor} ] && openEditor ${EDIT_CFG_FILE}
+  exit 0
+}
+
+main() {
+  # default options
+  KARAF_CMD="daemon"
+  KARAF_DAEMON=true
+
+  while [[ $# -gt 0 ]] ; do
+    case "$1" in
+      "config")
+        shift
+        configMenu "$@"
+        ;;
+      "-d"|"--debug" )
+        DAEMON_DEBUG=true
+        setupDaemonDebug
+        shift
+        ;;
+      "-i"|"--interactive" )
+        KARAF_CMD=""
+        unset KARAF_DAEMON
+        shift
+        ;;
+      "start" )
+        KARAF_CMD="daemon"
+        KARAF_DAEMON=true
+        shift;;
+      "status" )
+        KARAF_CMD="status"
+        unset KARAF_DAEMON
+        # surpress container not running error message if karaf has never started before
+        [ ! -f ${DAEMON_HOME}/data/port ] && echo 1 >${DAEMON_HOME}/data/port
+        shift;;
+      "stop" )
+        KARAF_CMD="stop"
+        unset KARAF_DAEMON
+        shift;;
+      *)
+        printHelp
+        exit 1
+        ;;
+    esac
+  done
+
+  init
+  #warn "EXTRA_JAVA_OPTS: ${EXTRA_JAVA_OPTS}"
+  if [ ${KARAF_DAEMON} ]; then
+    # Ensure the log directory exists
+    local log_dir=$(dirname ${DAEMON_LOG})
+    if [ ! -d "$log_dir" ]; then
+      mkdir -p "$log_dir"
+    fi
+
+    ${KARAF} "$KARAF_CMD" >> $DAEMON_LOG 2>&1 &
+    local pid=$!
+    # check if karaf process is running
+    sleep 1; kill -0 $pid 2> /dev/null
+
+    local errcode=$?
+    if [ "${errcode}" -gt 0 ]; then
+      die "$KARAF_CMD command returned a error, check $DAEMON_LOG file for extra info"
+    fi
+  else
+    ${KARAF} "$KARAF_CMD"
+  fi
+  exit 0
+}
+
+main "$@"
+__DAEMON_DEFAULTS__
+# Location of Apache Spark Client distribution
+sparkHome=/home/cloudera/spark-2.1.0-bin-hadoop2.7/
+
+# Spark Karaf Assembly
+sparkApp=/home/cloudera/pdi-ee-client-7.1-SNAPSHOT/data-integration
+
+# Spark Assembly Zip
+# This is the zip file of the PDI Assembly that will be used on the executors.  This can be an HDFS reference which will
+# help with performance launching the application.
+assemblyZip=hdfs:/opt/pentaho/pdi-ee-client-7.1-SNAPSHOT.zip
+
+# If set > -1 Debugging will be enabled for the Spark Application
+driverDebugPort=-1
+executorDebugPort=-1
+
+# If true the Spark Application will wait for a debugger to attach before executing.
+suspendDebug=true
+
+# Add extra java options for the spark driver app
+sparkDriverExtraJavaOptions=-Dlog4j.configuration=file:${sparkApp}/classes/log4j.xml
+
+# Add extra java options for the spark executors
+#sparkExecutorExtraJavaOptions=-Dsome.opt=someValue
+
+# The amount of memory to allocate to the spark driver (1g, 2g, 8g, ...)
+sparkDriverMemory=4g
+
+# The amount of memory to allocate to the spark executor (1g, 2g, 8g, ...)
+sparkExecutorMemory=1g
+
+# The amount of time in millis the Daemon will wait for the Driver program to claim the Execution
+driverTimeoutMillis=240000
+
+# Directory where *-site.xml files reside for Hadoop Configuration
+hadoopConfDir=/home/cloudera/yarn-conf
+
+# Hadoop User which will run job
+hadoopUser=devuser
+
+# Spark Master
+# Where spark will run: local / yarn
+# Note, you can also simulate multiple executors by using this notation (i.e. 2 executors):  local[2]
+sparkMaster=local
+
+# Deploy Mode
+# This property is only used when the master is set to `yarn`.
+# client  - Driver will run on the daemon machine; but the executors will run in Yarn
+# cluster - Entire application will be run in cluster (Not supported yet)
+sparkDeployMode=client
+        
+# Name of keytab used for the kerberos principal.
+keytabName=devuser.keytab
+
+# Name of the principal launching the spark application.
+kerberosPrincipal=devuser
+
+# Set to true in order to disable the proxy user.
+# Disabling will cause Spark Application to run as the principal user.
+disableProxyUser=false
+
+# Set to false if you need to debug anything in the SPARK_HOME/kettleConf directory
+overwriteConfig=true

@@ -1,0 +1,1187 @@
+13:31:26,502 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+13:31:26,632 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 1 at /opt/pentaho-data-integration/./system/kara ***
+***   f/caches/spoon/data-1                                                 ***
+*** FastBin Provider Port:52901                                             ***
+*** Karaf Port:8802                                                         ***
+*** OSGI Service Port:9051                                                  ***
+*******************************************************************************
+Aug 24, 2018 1:31:28 PM org.apache.karaf.main.Main$KarafLockCallback lockAquired
+INFO: Lock acquired. Setting startlevel to 100
+2018-08-24 13:31:31.174:INFO:oejs.Server:jetty-8.1.15.v20140411
+2018-08-24 13:31:31.243:INFO:oejs.AbstractConnector:Started NIOSocketConnectorWrapper@0.0.0.0:9051
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/core
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/beans
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/parameterized-types
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/configuration/security
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/wsdl/
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2005/08/addressing
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/08/addressing
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-management (152) [org.apache.cxf.management.InstrumentationManager]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (203) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (189) [org.apache.cxf.wsdl.WSDLManager]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (156) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/transports/http/configuration
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (192) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs-client
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (191) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/bindings/soap
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/simple
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (194) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxws
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/binding/coloc
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-local (199) [org.apache.cxf.transport.local.LocalTransportFactory]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-object (200) [org.apache.cxf.binding.object.ObjectBindingFactory]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/blueprint/binding/object
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/policy
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/ns/ws-policy
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2006/07/ws-policy
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/09/policy
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://www.w3.org/2000/09/xmldsig#
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (220) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/ws/addressing
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-security (222) [org.apache.cxf.ws.security.policy.WSSecurityPolicyLoader, org.apache.cxf.ws.security.cache.CacheCleanupListener]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-rm (224) [org.apache.cxf.ws.rm.RMManager, org.apache.cxf.ws.rm.policy.RMPolicyInterceptorProvider, org.apache.cxf.ws.rm.policy.RM10AssertionBuilder, org.apache.cxf.ws.rm.policy.RM12AssertionBuilder, org.apache.cxf.ws.rm.policy.WSRMP12PolicyLoader, org.apache.cxf.ws.rm.policy.MC11PolicyLoader, org.apache.cxf.ws.rm.policy.RSPPolicyLoader]
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://cxf.apache.org/ws/rm/manager
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.blueprint.NamespaceHandlerRegisterer register
+INFO: Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2005/02/rm/policy
+Aug 24, 2018 1:31:32 PM org.apache.cxf.bus.osgi.CXFExtensionBundleListener addExtensions
+INFO: Adding the extensions from bundle org.apache.cxf.cxf-rt-javascript (225) [org.apache.cxf.javascript.JavascriptServerListener]
+Aug 24, 2018 1:31:33 PM org.pentaho.caching.impl.PentahoCacheManagerFactory$RegistrationHandler$1 onSuccess
+INFO: New Caching Service registered
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Aug 24, 2018 1:31:36 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /marketplace
+Aug 24, 2018 1:31:36 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /lineage
+Aug 24, 2018 1:31:36 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /i18n
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/pentaho-data-integration/launcher/../lib/slf4j-log4j12-1.7.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/pentaho-data-integration/plugins/pentaho-big-data-plugin/lib/slf4j-log4j12-1.7.7.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Aug 24, 2018 1:31:37 PM org.apache.cxf.endpoint.ServerImpl initDestination
+INFO: Setting the server's publish address to be /repositories
+2018/08/24 13:31:44 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2018/08/24 16:03:52 - Spoon - Using legacy execution engine
+2018/08/24 16:03:52 - Spoon - Transformation opened.
+2018/08/24 16:03:52 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:03:52 - Spoon - Started the transformation execution.
+2018/08/24 16:03:52 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - "
+2018/08/24 16:03:52 - pharmaId_7 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_7 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_7 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7 2.0 - "
+2018/08/24 16:03:52 - pharmaId_7 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7 2]
+2018/08/24 16:03:52 - pharmaId_2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2.0 - "
+2018/08/24 16:03:52 - pharmaId_2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2]
+2018/08/24 16:03:52 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_1.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_1.0 - "
+2018/08/24 16:03:52 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_1]
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - "
+2018/08/24 16:03:52 - pharmaId_2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2 2]
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - "
+2018/08/24 16:03:52 - pharmaId_2 2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2 2 2]
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - "
+2018/08/24 16:03:52 - pharmaId_2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2]
+2018/08/24 16:03:52 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_7.0 - "
+2018/08/24 16:03:52 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7]
+2018/08/24 16:03:52 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:03:52 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:03:52 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:03:52 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:03:52 - pharmaId_2.0 - "
+2018/08/24 16:03:52 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2]
+2018/08/24 16:03:52 - pharmaId_7 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7 2 2]
+2018/08/24 16:03:53 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7 2 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2 2 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7 2.0] failed to initialize!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_1.0] failed to initialize!
+2018/08/24 16:03:53 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:03:53 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:03:53 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:03:53 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:03:53 - Spoon - 
+2018/08/24 16:03:53 - Spoon - 
+2018/08/24 16:03:53 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:03:53 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:03:53 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:03:53 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:04:50 - /Users/xavihidalgo/workspace/evolufarma/evolufarma-etl/pentaho-data-integration/etl-evolufarma-pharma-dashboard.ktr : etl-evolufarma-pharma-dashboard - Dispatching started for transformation [/Users/xavihidalgo/workspace/evolufarma/evolufarma-etl/pentaho-data-integration/etl-evolufarma-pharma-dashboard.ktr : etl-evolufarma-pharma-dashboard]
+2018/08/24 16:04:52 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:04:52 - dummy.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:04:52 - sales_total_operations.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:29:20 - Spoon - Using legacy execution engine
+2018/08/24 16:29:20 - Spoon - Transformation opened.
+2018/08/24 16:29:20 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:29:20 - Spoon - Started the transformation execution.
+2018/08/24 16:29:20 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - "
+2018/08/24 16:29:20 - pharmaId_2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2 2]
+2018/08/24 16:29:20 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7.0 - "
+2018/08/24 16:29:20 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7]
+2018/08/24 16:29:20 - pharmaId_2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2.0 - "
+2018/08/24 16:29:20 - pharmaId_2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2]
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - "
+2018/08/24 16:29:20 - pharmaId_7 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7 2 2]
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - "
+2018/08/24 16:29:20 - pharmaId_2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2]
+2018/08/24 16:29:20 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2.0 - "
+2018/08/24 16:29:20 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2]
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - "
+2018/08/24 16:29:20 - pharmaId_2 2 2 2 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2 2 2 2 2]
+2018/08/24 16:29:20 - pharmaId_7 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_7 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7 2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_7 2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_7 2.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_7 2.0 - "
+2018/08/24 16:29:20 - pharmaId_7 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7 2]
+2018/08/24 16:29:20 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:29:20 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_1.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:29:20 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:29:20 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:29:20 - pharmaId_1.0 - "
+2018/08/24 16:29:20 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_1]
+2018/08/24 16:29:21 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7 2 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2 2 2 2 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7 2.0] failed to initialize!
+2018/08/24 16:29:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_1.0] failed to initialize!
+2018/08/24 16:29:21 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:29:21 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:29:22 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:29:22 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:29:22 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:29:22 - Spoon - 
+2018/08/24 16:29:22 - Spoon - 
+2018/08/24 16:29:22 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:29:22 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:29:22 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:29:22 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:29:22 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:30:21 - Spoon - Using legacy execution engine
+2018/08/24 16:30:21 - Spoon - Transformation opened.
+2018/08/24 16:30:21 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:30:21 - Spoon - Started the transformation execution.
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:30:21 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_3.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_3.0 - "
+2018/08/24 16:30:21 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_3]
+2018/08/24 16:30:21 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_5.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_5.0 - "
+2018/08/24 16:30:21 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_5]
+2018/08/24 16:30:21 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_7.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_7.0 - "
+2018/08/24 16:30:21 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7]
+2018/08/24 16:30:21 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_9.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_9.0 - "
+2018/08/24 16:30:21 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_9]
+2018/08/24 16:30:21 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_2.0 - "
+2018/08/24 16:30:21 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_4.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_4.0 - "
+2018/08/24 16:30:21 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_4]
+2018/08/24 16:30:21 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2]
+2018/08/24 16:30:21 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_6.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_6.0 - "
+2018/08/24 16:30:21 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_8.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_8.0 - "
+2018/08/24 16:30:21 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_8]
+2018/08/24 16:30:21 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_6]
+2018/08/24 16:30:21 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:30:21 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_1.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:30:21 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:30:21 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:30:21 - pharmaId_1.0 - "
+2018/08/24 16:30:21 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_1]
+2018/08/24 16:30:21 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_3.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_5.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_9.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_4.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_6.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_8.0] failed to initialize!
+2018/08/24 16:30:21 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_1.0] failed to initialize!
+2018/08/24 16:30:21 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:30:21 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:30:22 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:30:22 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:30:22 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:30:22 - Spoon - 
+2018/08/24 16:30:22 - Spoon - 
+2018/08/24 16:30:22 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:30:22 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:30:22 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:30:22 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:30:22 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:32:47 - Spoon - Using legacy execution engine
+2018/08/24 16:32:47 - Spoon - Transformation opened.
+2018/08/24 16:32:47 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:32:47 - Spoon - Started the transformation execution.
+2018/08/24 16:32:47 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:32:48 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_3.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_3.0 - "
+2018/08/24 16:32:48 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_3]
+2018/08/24 16:32:48 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_5.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_5.0 - "
+2018/08/24 16:32:48 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_5]
+2018/08/24 16:32:48 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_7.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_7.0 - "
+2018/08/24 16:32:48 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_6.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_6.0 - "
+2018/08/24 16:32:48 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_2.0 - "
+2018/08/24 16:32:48 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_9.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_9.0 - "
+2018/08/24 16:32:48 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2]
+2018/08/24 16:32:48 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_6]
+2018/08/24 16:32:48 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_1.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_1.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_1.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_1.0 - "
+2018/08/24 16:32:48 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_8.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_8.0 - "
+2018/08/24 16:32:48 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:32:48 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_4.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:32:48 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:32:48 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:32:48 - pharmaId_4.0 - "
+2018/08/24 16:32:48 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7]
+2018/08/24 16:32:48 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_4]
+2018/08/24 16:32:48 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_8]
+2018/08/24 16:32:48 - pharmaId_1.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_1]
+2018/08/24 16:32:48 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_9]
+2018/08/24 16:32:48 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_3.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_5.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_9.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_4.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_6.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_8.0] failed to initialize!
+2018/08/24 16:32:48 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_1.0] failed to initialize!
+2018/08/24 16:32:48 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:32:48 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:32:49 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:32:49 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:32:49 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:32:49 - Spoon - 
+2018/08/24 16:32:49 - Spoon - 
+2018/08/24 16:32:49 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:32:49 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:32:49 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:32:49 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:32:49 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:34:11 - Spoon - Using legacy execution engine
+2018/08/24 16:34:12 - Spoon - Transformation opened.
+2018/08/24 16:34:12 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:34:12 - Spoon - Started the transformation execution.
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:34:12 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_3.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_3.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_3.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_3.0 - "
+2018/08/24 16:34:12 - pharmaId_3.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_3]
+2018/08/24 16:34:12 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_5.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_5.0 - "
+2018/08/24 16:34:12 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_5]
+2018/08/24 16:34:12 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_9.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_9.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_9.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_9.0 - "
+2018/08/24 16:34:12 - pharmaId_9.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_9]
+2018/08/24 16:34:12 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_7.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_7.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_7.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_7.0 - "
+2018/08/24 16:34:12 - pharmaId_7.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_7]
+2018/08/24 16:34:12 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_8.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_8.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_8.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_8.0 - "
+2018/08/24 16:34:12 - pharmaId_8.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_8]
+2018/08/24 16:34:12 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_6.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_6.0 - "
+2018/08/24 16:34:12 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_6]
+2018/08/24 16:34:12 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_4.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_4.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_4.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_4.0 - "
+2018/08/24 16:34:12 - pharmaId_4.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_4]
+2018/08/24 16:34:12 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:34:12 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_2.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:34:12 - pharmaId_2.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:34:12 - pharmaId_2.0 - pharmaId	Integer								
+2018/08/24 16:34:12 - pharmaId_2.0 - "
+2018/08/24 16:34:12 - pharmaId_2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_2]
+2018/08/24 16:34:12 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_3.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_5.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_7.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_9.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_2.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_4.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_6.0] failed to initialize!
+2018/08/24 16:34:12 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_8.0] failed to initialize!
+2018/08/24 16:34:12 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:34:12 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:34:13 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:34:13 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:34:13 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:34:13 - Spoon - 
+2018/08/24 16:34:13 - Spoon - 
+2018/08/24 16:34:13 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:34:13 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:34:13 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:34:13 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:34:13 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:01 - Spoon - Using legacy execution engine
+2018/08/24 16:35:01 - Spoon - Transformation opened.
+2018/08/24 16:35:01 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:35:01 - Spoon - Started the transformation execution.
+2018/08/24 16:35:01 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:35:01 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:35:01 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:35:01 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:35:01 - pharmaId_5.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:35:01 - pharmaId_5.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:35:01 - pharmaId_5.0 - pharmaId	Integer								
+2018/08/24 16:35:01 - pharmaId_5.0 - "
+2018/08/24 16:35:01 - pharmaId_5.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_5]
+2018/08/24 16:35:01 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Couldn't parse Integer field [pharmaId] with value [500
+2018/08/24 16:35:01 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:35:01 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:35:01 - pharmaId_6.0 - ] --> java.lang.NumberFormatException: For input string: "500
+2018/08/24 16:35:01 - pharmaId_6.0 - Name	Type	Format	Length	Precision	Currency	Decimal	Group	Value	Set empty string?
+2018/08/24 16:35:01 - pharmaId_6.0 - pharmaId	Integer								
+2018/08/24 16:35:01 - pharmaId_6.0 - "
+2018/08/24 16:35:01 - pharmaId_6.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Error initializing step [pharmaId_6]
+2018/08/24 16:35:02 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:02 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_5.0] failed to initialize!
+2018/08/24 16:35:02 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Step [pharmaId_6.0] failed to initialize!
+2018/08/24 16:35:02 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:35:02 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : etl-evolufarma-pharma-dashboard: preparing transformation execution failed
+2018/08/24 16:35:02 - Spoon - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2018/08/24 16:35:02 - Spoon - We failed to initialize at least one step.  Execution can not begin!
+2018/08/24 16:35:02 - Spoon - 
+2018/08/24 16:35:02 - Spoon - 
+2018/08/24 16:35:02 - Spoon - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1157)
+2018/08/24 16:35:02 - Spoon - 	at org.pentaho.di.ui.spoon.trans.TransGraph$29.run(TransGraph.java:4197)
+2018/08/24 16:35:02 - Spoon - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:02 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:02 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:23 - Spoon - Using legacy execution engine
+2018/08/24 16:35:23 - Spoon - Transformation opened.
+2018/08/24 16:35:23 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:35:23 - Spoon - Started the transformation execution.
+2018/08/24 16:35:23 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:35:23 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:35:23 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:35:23 - pharmaId_6.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:23 - sales_total_operations.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_4.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales free amount.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_2.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - articles_free.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_8.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales_total_operations 2 2.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_3.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales amount.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_5.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - sales_prescription.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:26 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:35:26 - pharmaId_1.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:26 - articles_sold.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:27 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:35:27 - pharmaId_7.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:35:27 - sales_total_operations 2.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - Error updating batch
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	... 3 more
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:28 - sales_prescription_amount 2.0 - 	... 6 more
+org.pentaho.di.core.exception.KettleDatabaseException: 
+An error occurred executing SQL: 
+SELECT 
+	FSL.superfamily as superid, 
+	SF.description as super_name, 
+	FSL.family as famid, 
+	F.description as family_name, 
+	ROUND(sum(FSL.amount - FSL.discount),2) as total,
+	count(*) as count 
+
+FROM 
+	ph_500_fsales as FS, 
+	ph_500_fsaleLines as FSL, 
+	ph_500_fsuperfamily AS SF, 
+	ph_500_ffamily as F
+
+WHERE 
+
+-- date_format(FS.date, '%m-%Y') = '" + (month < 10 ? "0" : "") + month + "-" + year + "' --
+
+FSL.sale_id = FS.id 
+AND FSL.family=F.id 
+AND FSL.superfamily = SF.id 
+
+GROUP BY 1, 3
+Statement cancelled due to client request
+
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1764)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:236)
+	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:140)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.cj.jdbc.exceptions.MySQLStatementCancelledException: Statement cancelled due to client request
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:110)
+	at com.mysql.cj.jdbc.StatementImpl.checkCancelTimeout(StatementImpl.java:2210)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1118)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:915)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1182)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1186)
+	at org.pentaho.di.core.database.Database.openQuery(Database.java:1753)
+	... 4 more
+2018/08/24 16:35:29 - sales_per_family_query.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected error
+2018/08/24 16:35:29 - sales_per_family_query.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseException: 
+2018/08/24 16:35:29 - sales_per_family_query.0 - An error occurred executing SQL: 
+2018/08/24 16:35:29 - sales_per_family_query.0 - SELECT 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	FSL.superfamily as superid, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	SF.description as super_name, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	FSL.family as famid, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	F.description as family_name, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	ROUND(sum(FSL.amount - FSL.discount),2) as total,
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	count(*) as count 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - FROM 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	ph_500_fsales as FS, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	ph_500_fsaleLines as FSL, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	ph_500_fsuperfamily AS SF, 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	ph_500_ffamily as F
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - WHERE 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - -- date_format(FS.date, '%m-%Y') = '" + (month < 10 ? "0" : "") + month + "-" + year + "' --
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - FSL.sale_id = FS.id 
+2018/08/24 16:35:29 - sales_per_family_query.0 - AND FSL.family=F.id 
+2018/08/24 16:35:29 - sales_per_family_query.0 - AND FSL.superfamily = SF.id 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - GROUP BY 1, 3
+2018/08/24 16:35:29 - sales_per_family_query.0 - Statement cancelled due to client request
+2018/08/24 16:35:29 - sales_per_family_query.0 - 
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1764)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.doQuery(TableInput.java:236)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at org.pentaho.di.trans.steps.tableinput.TableInput.processRow(TableInput.java:140)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:29 - sales_per_family_query.0 - Caused by: com.mysql.cj.jdbc.exceptions.MySQLStatementCancelledException: Statement cancelled due to client request
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:110)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.jdbc.StatementImpl.checkCancelTimeout(StatementImpl.java:2210)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:1118)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:915)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1182)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1186)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	at org.pentaho.di.core.database.Database.openQuery(Database.java:1753)
+2018/08/24 16:35:29 - sales_per_family_query.0 - 	... 4 more
+child index = 41, logging object : org.pentaho.di.core.logging.LoggingObject@1055d175 parent=ad950bed-a090-4de2-97b2-e789b6fc53bf
+2018/08/24 16:35:29 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:35:29 - sales_per_family_query.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=1)
+2018/08/24 16:35:29 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:29 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:29 - sales_prescription_amount 2.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:29 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:29 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:31 - sales_free_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_free_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_free_amount.0 - Error updating batch
+2018/08/24 16:35:31 - sales_free_amount.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_amount.0 - 
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_free_amount.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_free_amount.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_free_amount.0 - 	... 6 more
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - Error updating batch
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - 	... 6 more
+2018/08/24 16:35:31 - sales_free_amount.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:31 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:31 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:31 - sales_free_articles_sold.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:31 - sales_free_operations.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_free_operations.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_free_operations.0 - Error updating batch
+2018/08/24 16:35:31 - sales_free_operations.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_operations.0 - 
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_free_operations.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_free_operations.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_free_operations.0 - 	... 6 more
+2018/08/24 16:35:31 - sales_free_operations.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:31 - sales_total_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_total_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_total_amount.0 - Error updating batch
+2018/08/24 16:35:31 - sales_total_amount.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_amount.0 - 
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_total_amount.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_total_amount.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_total_amount.0 - 	... 6 more
+2018/08/24 16:35:31 - sales_total_amount.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_prescription_amount.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_prescription_amount.0 - Error updating batch
+2018/08/24 16:35:31 - sales_prescription_amount.0 - Table 'evolufarma.DATAWARE__sales_prescription_amount' doesn't exist
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - Caused by: java.sql.BatchUpdateException: Table 'evolufarma.DATAWARE__sales_prescription_amount' doesn't exist
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_prescription_amount.0 - Caused by: java.sql.SQLSyntaxErrorException: Table 'evolufarma.DATAWARE__sales_prescription_amount' doesn't exist
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_prescription_amount.0 - 	... 6 more
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - Error updating batch
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	... 3 more
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - 	... 6 more
+2018/08/24 16:35:31 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:31 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:31 - sales_prescription_amount.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:31 - sales_total_articles_sold.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Unexpected batch update error committing the database connection.
+2018/08/24 16:35:32 - sales_prescription_operations.0 - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2018/08/24 16:35:32 - sales_prescription_operations.0 - Error updating batch
+2018/08/24 16:35:32 - sales_prescription_operations.0 - Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1427)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1416)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.dispose(TableOutput.java:586)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:96)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at java.lang.Thread.run(Thread.java:748)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - Caused by: java.sql.BatchUpdateException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.util.Util.handleNewInstance(Util.java:210)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:185)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.util.Util.getInstance(Util.java:192)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:875)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:457)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:813)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at org.pentaho.di.core.database.Database.emptyAndCommit(Database.java:1403)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	... 3 more
+2018/08/24 16:35:32 - sales_prescription_operations.0 - Caused by: java.sql.SQLException: Data truncated for column 'pharmaId' at row 1
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:854)
+2018/08/24 16:35:32 - sales_prescription_operations.0 - 	... 6 more
+2018/08/24 16:35:32 - sales_prescription_operations.0 - Finished processing (I=0, O=0, R=112, W=0, U=0, E=1)
+2018/08/24 16:35:32 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:32 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:33 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:33 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:33 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:33 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:34 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:34 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:35:34 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:35 - Spoon - The transformation has finished!!
+2018/08/24 16:35:35 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:35 - etl-evolufarma-pharma-dashboard - ERROR (version 7.1.0.0-12, build 1 from 2017-05-16 17.18.02 by buildguy) : Errors detected!
+2018/08/24 16:35:35 - etl-evolufarma-pharma-dashboard - Transformation detected one or more steps with errors.
+2018/08/24 16:35:35 - etl-evolufarma-pharma-dashboard - Transformation is killing the other steps!
+2018/08/24 16:37:52 - Spoon - Using legacy execution engine
+2018/08/24 16:37:52 - Spoon - Transformation opened.
+2018/08/24 16:37:52 - Spoon - Launching transformation [etl-evolufarma-pharma-dashboard]...
+2018/08/24 16:37:52 - Spoon - Started the transformation execution.
+2018/08/24 16:37:52 - etl-evolufarma-pharma-dashboard - Dispatching started for transformation [etl-evolufarma-pharma-dashboard]
+2018/08/24 16:37:52 - sales_free_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_per_family.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_prescription_operations.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_total_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_free_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_prescription_amount 2.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_prescription_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_total_articles_sold.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:37:52 - sales_free_amount.0 - Connected to database [evolufarma prod] (commit=1000)
+2018/08/24 16:38:02 - sales_total_operations.0 - Finished reading query, closing connection.
+2018/08/24 16:38:02 - pharmaId_1.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:02 - pharmaId_6.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:02 - pharmaId_3.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:02 - pharmaId_2.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:02 - articles_sold.0 - Finished reading query, closing connection.
+2018/08/24 16:38:02 - sales amount.0 - Finished reading query, closing connection.
+2018/08/24 16:38:02 - articles_free.0 - Finished reading query, closing connection.
+2018/08/24 16:38:02 - sales_total_operations.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:02 - articles_free.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:02 - articles_sold.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:02 - sales amount.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:03 - sales free amount.0 - Finished reading query, closing connection.
+2018/08/24 16:38:03 - pharmaId_4.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:03 - sales free amount.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:03 - sales_total_operations 2 2.0 - Finished reading query, closing connection.
+2018/08/24 16:38:03 - pharmaId_8.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:03 - sales_total_operations 2 2.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:04 - sales_prescription.0 - Finished reading query, closing connection.
+2018/08/24 16:38:04 - pharmaId_5.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:04 - sales_prescription.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:04 - sales_total_operations 2.0 - Finished reading query, closing connection.
+2018/08/24 16:38:04 - pharmaId_7.0 - Finished processing (I=0, O=0, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:04 - sales_total_operations 2.0 - Finished processing (I=112, O=0, R=0, W=112, U=0, E=0)
+2018/08/24 16:38:06 - sales_per_family_query.0 - Finished reading query, closing connection.
+2018/08/24 16:38:06 - pharmaId_9.0 - Finished processing (I=0, O=0, R=36, W=36, U=0, E=0)
+2018/08/24 16:38:06 - sales_per_family_query.0 - Finished processing (I=36, O=0, R=0, W=36, U=0, E=0)
+2018/08/24 16:38:07 - sales_prescription_amount 2.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:07 - sales_free_articles_sold.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:07 - sales_total_amount.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:07 - sales_total_articles_sold.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:08 - sales_per_family.0 - Finished processing (I=0, O=36, R=36, W=36, U=0, E=0)
+2018/08/24 16:38:08 - sales_free_amount.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:08 - sales_free_operations.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:09 - sales_prescription_amount.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:09 - sales_prescription_operations.0 - Finished processing (I=0, O=112, R=112, W=112, U=0, E=0)
+2018/08/24 16:38:09 - Spoon - The transformation has finished!!
+Aug 24, 2018 4:41:21 PM org.apache.karaf.main.Main doMonitor
+INFO: Data directory does not exist anymore, halting

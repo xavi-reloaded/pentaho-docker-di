@@ -1,0 +1,9 @@
+{
+  "name": "pentaho/config/deploy",
+  "version": "7.1.0.0-12",
+  "config": {
+    "pentaho/service": {
+      "pentaho/config/deploy_7.1.0.0-12/config": "pentaho.config.spec.IRuleSet"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+# place jaas.conf file in this directory.
