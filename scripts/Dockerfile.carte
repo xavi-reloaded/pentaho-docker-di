@@ -1,0 +1,9 @@
+FROM xavinguer/pentaho-di:7.1
+
+MAINTAINER Xavi Hidalgo
+
+COPY .kettle/ $KETTLE_HOME/.kettle/
+
+COPY repo/ $KETTLE_HOME/repo/
+
+CMD ["carte.sh", "/pentaho-di/carte_config.xml"]

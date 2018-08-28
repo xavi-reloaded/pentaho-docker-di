@@ -1,0 +1,5 @@
+build
+README_master.md
+.idea
+*.iml
+pentaho-di/plugins/pentaho-big-data-plugin/pentaho-mapreduce-libraries.zip
